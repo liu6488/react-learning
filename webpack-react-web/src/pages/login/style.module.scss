@@ -1,0 +1,17 @@
+.outer{
+  padding-top: 10%;
+  text-align: center;
+  .container{
+    margin: 0 auto;
+    width: 28%;
+    border: 1px solid red;
+    background-color:#F6F8FA ;
+    border: 1px solid #D8DEE4;
+    padding: 16px;
+    border-radius: 6px;
+  }
+}
+.logo{
+  width: 48px;
+  height: 48px;
+}

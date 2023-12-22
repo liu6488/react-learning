@@ -1,0 +1,35 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.calendar{
+  background: #18191E;
+  height: 100%;
+  color: white;
+  font-family: fangsong;
+  text-align: center;
+}
+.cal-header{
+  display: flex;
+  font-weight: bold;
+}
+.middle{
+  flex: 8;
+}
+.left,.right{
+  flex: 1;
+  padding-top: 3%;
+}
+.not-cur-month{
+  color: gray;
+}
+.today{
+  color: lime;
+  font-weight: bold;
+}
+
+span{
+  margin: 10px 0;
+  display: inline-block;
+  width: 13%;
+}

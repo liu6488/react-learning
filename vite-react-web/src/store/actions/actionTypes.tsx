@@ -1,0 +1,12 @@
+export const userActionTypes = {
+  SET_USER_INFO: 'SET_USER_INFO',
+  CLEAN_USER_INFO: 'CLEAN_USER_INFO',
+  SET_TOKEN: 'SET_TOKEN',
+  CLEAN_TOKEN: 'CLEAN_TOKEN',
+  CHANGE_LOGIN_STATUS: 'CHANGE_LOGIN_STATUS',
+};
+
+
+export const routerActionTypes = {
+  CHANGE_ROUTE_TYPE: "CHANGE_ROUTE_TYPE"   // 修改路由类型
+}
