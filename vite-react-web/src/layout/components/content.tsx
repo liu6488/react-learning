@@ -1,13 +1,9 @@
 import { Content } from ".."
 import { RouterDom } from '../../router/index'
-import React from 'react'
 // Layout的主题内容部分
 export default function ContentDemo(props: any) {
 
-  const userInfo = {
-    name: "admin", role: 'admin'
-  }
-  const UserInfo = React.createContext(userInfo)
+
 
   return (
     <Content
@@ -18,9 +14,7 @@ export default function ContentDemo(props: any) {
         minHeight: 280,
       }}
     >
-      <UserInfo.Provider value={userInfo}>
-        {RouterDom}
-      </UserInfo.Provider>
+      {RouterDom}
     </Content>
   )
 }

@@ -97,6 +97,13 @@ export const permissionRouterList: Array<any> = [
         title: 'useContext',
         roles: ['teacher', 'admin'],
         isMenuItem: true,
+      },
+      {
+        path: '/hooks/useReducer',
+        component: lazy(() => import('../views/hooksp/useReducer')),
+        title: 'useReducer',
+        roles: ['teacher', 'admin'],
+        isMenuItem: true,
       }
     ]
   },
