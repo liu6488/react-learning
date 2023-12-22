@@ -71,7 +71,7 @@ export const permissionRouterList: Array<any> = [
   },
   {
     path: '/hooks',
-    component: lazy(() => import('../views/hooksp/useState')),
+    component: lazy(() => import('../views/hooksp/index')),
     title: '钩子函数',
     roles: ['teacher', 'admin'],
     icon: <AppstoreOutlined />,
@@ -81,6 +81,20 @@ export const permissionRouterList: Array<any> = [
         path: '/hooks/useState',
         component: lazy(() => import('../views/hooksp/useState')),
         title: 'useState',
+        roles: ['teacher', 'admin'],
+        isMenuItem: true,
+      },
+      {
+        path: '/hooks/useEffect',
+        component: lazy(() => import('../views/hooksp/useEffect')),
+        title: 'useEffect',
+        roles: ['teacher', 'admin'],
+        isMenuItem: true,
+      },
+      {
+        path: '/hooks/useContext',
+        component: lazy(() => import('../views/hooksp/useContext')),
+        title: 'useContext',
         roles: ['teacher', 'admin'],
         isMenuItem: true,
       }

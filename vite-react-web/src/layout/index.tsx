@@ -3,7 +3,7 @@ import Logo from './components/logo'
 import MenuDemo from './components/menu'
 import HeaderDemo from './components/header'
 import ContentDemo from './components/content'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { filteredRouter } from '../router/index'
 
@@ -19,6 +19,8 @@ export default function LayoutComponent(props: any) {
   function toToggle() {
     setCollapsed(!collapsed)
   }
+
+
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>

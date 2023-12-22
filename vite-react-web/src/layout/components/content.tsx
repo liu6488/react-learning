@@ -1,8 +1,14 @@
 import { Content } from ".."
 import { RouterDom } from '../../router/index'
-
+import React from 'react'
 // Layout的主题内容部分
 export default function ContentDemo(props: any) {
+
+  const userInfo = {
+    name: "admin", role: 'admin'
+  }
+  const UserInfo = React.createContext(userInfo)
+
   return (
     <Content
       className="site-layout-background"
@@ -12,7 +18,9 @@ export default function ContentDemo(props: any) {
         minHeight: 280,
       }}
     >
-      {RouterDom}
+      <UserInfo.Provider value={userInfo}>
+        {RouterDom}
+      </UserInfo.Provider>
     </Content>
   )
 }
