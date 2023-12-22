@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Tabs, Statistic, Divider, Button, Form, Input } from "antd";
 import style from "./style.module.scss";
+
+
 const UseStateDemo: React.FC = () => {
   return (
     <Tabs defaultActiveKey="1">
@@ -24,9 +26,13 @@ const NormalUpdateDemo: React.FC = () => {
       <Button type="primary" onClick={() => setCount(count + 1)}>
         +
       </Button>
+      <Divider></Divider>
+
     </div>
   );
 }
+
+
 
 // 函数更新
 const FunctionUpdateDemo: React.FC = () => {
@@ -84,4 +90,9 @@ const FunctionUpdateDemo: React.FC = () => {
     </>
   )
 }
+
+
+
+
+
 export default UseStateDemo;
