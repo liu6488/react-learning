@@ -1,23 +1,14 @@
 
-import hljs from '../utils/hljs';
+import Markdown from 'react-markdown'
+import rehypeHighlight from 'rehype-highlight'
+import "highlight.js/styles/atom-one-dark.css";
 
 
-
-const CodeBlock = (code: any) => {
-  console.log(code);
-
-  const highlightedCode = hljs.highlight(
-    code,
-    { language: 'javascript' }
-  ).code
+const CodeBlock = ({ markdown }: { markdown: string }) => {
   return (
-    <>
-      <pre>
-        <code id={'javascript'}  >
-          {highlightedCode}
-        </code>
-      </pre>
-    </>
+    <Markdown rehypePlugins={[rehypeHighlight]}
+    >{markdown}
+    </Markdown>
   )
 }
 

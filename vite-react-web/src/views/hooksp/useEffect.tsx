@@ -1,8 +1,7 @@
 import { Tabs, Button } from "antd";
 import { useEffect, useRef } from "react";
-import Markdown from 'react-markdown'
-import rehypeHighlight from 'rehype-highlight'
-import "highlight.js/styles/atom-one-dark.css";
+import CodeBlock from "../../components/CodeBlock";
+
 
 const componentUpdate = `
 #  组件刷新
@@ -43,9 +42,7 @@ const UseEffectDemo = () => {
       {
         dataMap.map((item, index) =>
           <Tabs.TabPane tab={item.tabName} key={index}>
-            <Markdown rehypePlugins={[rehypeHighlight]}
-            >{item.component}
-            </Markdown>
+            <CodeBlock markdown={item.component} />
           </Tabs.TabPane>
         )
       }
