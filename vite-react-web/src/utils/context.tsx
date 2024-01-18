@@ -1,5 +1,11 @@
 import React from "react"
-export const userInfo = {
+
+interface InitValueType {
+  name: string
+  role: string
+  [propsName: string]: any
+}
+export const initValue: Partial<InitValueType> = {
   name: "admin", role: 'admin'
 }
-export const UserInfo = React.createContext(userInfo)
+export const TopContext = React.createContext(initValue)

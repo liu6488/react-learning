@@ -104,6 +104,13 @@ export const permissionRouterList: Array<any> = [
         title: 'useReducer',
         roles: ['teacher', 'admin'],
         isMenuItem: true,
+      },
+      {
+        path: '/hooks/useCallBack',
+        component: lazy(() => import('../views/hooksp/useCallBack')),
+        title: 'useCallBack',
+        roles: ['teacher', 'admin'],
+        isMenuItem: true,
       }
     ]
   },
