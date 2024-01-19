@@ -1,5 +1,5 @@
 import { Tabs, Button } from "antd";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import CodeBlock from "../../components/CodeBlock";
 
 
@@ -31,12 +31,40 @@ const componentDestory = `
 #  组件销毁
 \`\`\`js
 useEffect(()=>{
-  return ()=>{
-
-  }
+  return ()=>{  }
 },[])
 \`\`\`
 `
+
+const TempDemo = () => {
+  const [count, setCount] = useState(0)
+  const [data, setData] = useState({ name: 'chang ' })
+
+  useEffect(() => {
+    console.log('页面进入')
+  }, [])
+
+  useEffect(() => {
+    if (count != 0) {
+      console.log('count变化',count)
+    }
+    console.log(data);
+
+  }, [count, data])
+
+  const handleAddCount = () => {
+    setCount(count + 1)
+    setTimeout(() => {
+      setData({ ...data, name: 'liu' })
+    }, 1000);
+  }
+  return <>
+    {count}
+    <button onClick={
+      handleAddCount
+    }>+</button>
+  </>
+}
 
 
 const UseEffectDemo = () => {
@@ -46,6 +74,7 @@ const UseEffectDemo = () => {
       {
         dataMap.map((item, index) =>
           <Tabs.TabPane tab={item.tabName} key={index}>
+            {index === 0 ? <TempDemo /> : <></>}
             <CodeBlock markdown={item.component} />
           </Tabs.TabPane>
         )
