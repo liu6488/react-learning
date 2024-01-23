@@ -24,7 +24,7 @@ const transformPathsToRoutes = (paths: HookRouterPathType) => {
         // 路由的组件是lazy导入的../views/hooksp/文件名
         const route = {
           path: routePath,
-          component: lazy(() => import(`../views/hooksp/${fileName}`)),
+          component: lazy(() => import(/* @vite-ignore */`../views/hooksp/${fileName}`)),
           title: fileName,
           roles: ['teacher', 'admin'],
           isMenuItem: true,
